@@ -1,1 +1,69 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StellarLaunch | Global Rocket Dashboard</title>
+    <meta name="description" content="Worldwide upcoming rocket launches with real-time countdown.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="stars-container" id="starsContainer"></div>
+
+    <main class="container">
+        <!-- Hero Section: Next Launch -->
+        <section class="hero" id="featuredLaunch">
+            <span class="next-launch-label">Next Launch</span>
+            <h1 id="heroMissionName">Loading Mission...</h1>
+            
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">Mins</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">Secs</span>
+                </div>
+            </div>
+
+            <div class="hero-details" id="heroDetails">
+                <!-- Site and Rocket injected here -->
+            </div>
+        </section>
+
+        <!-- Dynamic Grid Section -->
+        <section class="upcoming-section">
+            <h2 class="section-title">Upcoming Missions</h2>
+            <div class="launch-grid" id="launchGrid">
+                <!-- Cards injected here -->
+                <div class="loading-state">Syncing with orbital data...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container" style="padding: 2rem; border-top: 1px solid var(--card-border); text-align: center; color: var(--text-secondary); font-size: 0.8rem;">
+        Data provided by Launch Library 2 &bull; Developed with &hearts; for the ISU Space Lab
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
